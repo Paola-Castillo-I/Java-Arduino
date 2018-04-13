@@ -3,7 +3,7 @@
 Instituto Tecnológico de León
 Ingenieria en Sistemas Computacionales
 Sistemas Programables
-Trabajo: Envio de Mensajes, hora y temperatura a LCD por Medio 
+Trabajo: Envio de Mensajes, hora, fecha y temperatura a LCD por Medio 
          de Conexion Entre Arduino y Java.
 Profesor: Ing. Levy Rojas Carlos Rafael
 Presentado por: Alejandro Macario Gómez Ramírez
