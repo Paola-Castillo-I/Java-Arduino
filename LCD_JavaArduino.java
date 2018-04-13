@@ -33,7 +33,7 @@ import jssc.SerialPortEventListener;
 import jssc.SerialPortException;
 //Fin de importacion de paquetes y librerias
 //Creacion de la clase publica que contendra todos los metodos
-public class Int1 extends javax.swing.JFrame {
+public class LCD_JavaArduino extends javax.swing.JFrame {
 //Declaracion de variables
     //Declaracion de la variable que contendra el mensaje introducido
     String cadena = "";
