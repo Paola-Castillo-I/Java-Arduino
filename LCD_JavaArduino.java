@@ -3,7 +3,7 @@
 Instituto Tecnológico de León
 Ingenieria en Sistemas Computacionales
 Sistemas Programables
-Trabajo: Envio de Mensajes, hora, fecha y temperatura a LCD por Medio 
+Trabajo: Envio de Mensajes, hora y temperatura a LCD por Medio 
          de Conexion Entre Arduino y Java.
 Profesor: Ing. Levy Rojas Carlos Rafael
 Presentado por: Alejandro Macario Gómez Ramírez
@@ -67,12 +67,12 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
             //Atrapamos errores en caso de no lograr la conexion serial
             } catch (SerialPortException | ArduinoException ex) {
                 //Obtenemos el nombre del puerto y aclaramos si si se pudo efectuar la conexion
-                Logger.getLogger(Int1.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(LCD_JavaArduino.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     };
     //Declaracion de constructor
-    public Int1() {
+    public LCD_JavaArduino() {
         //Indica el titulo que llevara la ventana de la interfaz
         super("JAVA-ARDUINO");
         //Iniciamos componentes de la interfaz
@@ -86,7 +86,7 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
         //Atrapamos la excepcion que arroja Arduino en caso de no lograr la conexion    
         } catch (ArduinoException ex) {
             //Obtenemos el nombre del puerto y aclaramos si si se pudo efectuar la conexion
-            Logger.getLogger(Int1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LCD_JavaArduino.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     //Generacion de codigo que contiene la interfaz grafica
@@ -218,7 +218,7 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>
-    //Fin de codigo generado por NetBeans                        
+    //Fin de codigo generado por NetBeans
     
     //Creacion del metodo correspondiente al boton que guarda los mensajes en el arreglo
     private void BTNGuardaActionPerformed(java.awt.event.ActionEvent evt) {                                          
@@ -273,7 +273,7 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
         //Atrapamos la excepcion que arroja Arduino en caso de no lograr la conexion    
         } catch (ArduinoException | SerialPortException ex) {
             //Obtenemos el nombre del puerto y aclaramos si si se pudo efectuar la conexion
-            Logger.getLogger(Int1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LCD_JavaArduino.class.getName()).log(Level.SEVERE, null, ex);
         }
     }                                       
     
@@ -296,7 +296,7 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
         //Atrapamos la excepcion que arroja Arduino en caso de no lograr la conexion    
         } catch (ArduinoException | SerialPortException ex) {
             //Obtenemos el nombre del puerto y aclaramos si si se pudo efectuar la conexion
-            Logger.getLogger(Int1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LCD_JavaArduino.class.getName()).log(Level.SEVERE, null, ex);
         }
     }                                        
 
@@ -307,7 +307,7 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
             //Iniciamos programa
             public void run() {
                 //Hacemos visible la interfaz grafica
-                new Int1().setVisible(true);
+                new LCD_JavaArduino().setVisible(true);
             }
         });
     }
@@ -330,7 +330,7 @@ public class LCD_JavaArduino extends javax.swing.JFrame {
     //Establecemos el valor del contador
     public static void setIno(PanamaHitek_Arduino ino) {
         //Establecemos el valor actual recibido por Arduino
-        Int1.ino = ino;
+        LCD_JavaArduino.ino = ino;
     }
     //Obtenemos el valor de la cadena cada vez que el boton Guardar se presiona
     public JButton getBTNGuarda() {
